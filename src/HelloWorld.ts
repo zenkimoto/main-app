@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit';
-import { property } from 'lit/decorators.js';
+import { property, customElement } from 'lit/decorators.js';
 
+@customElement('hello-world')
 export class HelloWorld extends LitElement {
   @property({ type: String }) title = 'My app';
 
