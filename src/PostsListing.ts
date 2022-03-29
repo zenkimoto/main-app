@@ -18,8 +18,11 @@ export class PostListing extends LitElement {
   render() {
     return html`
         <h1>Posts</h1>
+        <p>Click on a post to see author.</p>
+        <ul>
         ${this.posts.map(p => html`<post-detail postId="${p.id}" title="${p.title}" postBody="${p.body}" userId="${p.userId}">
         </post-detail>`)}
+        </ul>
     `;
   }
 }

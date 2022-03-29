@@ -27,9 +27,13 @@ export class AuthorDetail extends LitElement {
     console.log('author', this.author, 'open', this.isOpen);
     return this.author && this.isOpen === 'true' ? 
     html`
-      <div>
-        <strong>Name: </strong> ${this.author.name}
-      </div>
+      <ul>
+        <li>
+          <div>
+            <strong>Author's Name: </strong> ${this.author.name}
+          </div>
+        </li>
+      </ul>
     ` : ``;
   }
 }

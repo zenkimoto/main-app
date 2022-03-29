@@ -29,10 +29,12 @@ export class PostDetail extends LitElement {
 
   render() {
     return html`
+      <li>
       <div @click="${this.postClicked}">
-        <strong>Title:</strong> ${this.title}
+        <strong>Post Title:</strong> ${this.title}
         <author-detail authorId="${this.userId}" isOpen="${this.isOpen}"></author-detail>
       </div>
+      </li>
     `;
   }
 
