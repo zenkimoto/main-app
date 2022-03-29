@@ -12,6 +12,12 @@ export class PostDetail extends LitElement {
   @property()
   public postBody: string = '';                                                                                          
 
+  @property()
+  public userId: number = 0;
+
+  @state()
+  private isOpen: boolean = false;
+
   connectedCallback() {
     // Don't forget to call super!  Wasted an hour of my time.
     super.connectedCallback();
@@ -23,9 +29,15 @@ export class PostDetail extends LitElement {
 
   render() {
     return html`
-      <div>
+      <div @click="${this.postClicked}">
         <strong>Title:</strong> ${this.title}
+        <author-detail authorId="${this.userId}" isOpen="${this.isOpen}"></author-detail>
       </div>
     `;
+  }
+
+  postClicked() {
+    console.log('clicked!');
+    this.isOpen = !this.isOpen;
   }
 }
