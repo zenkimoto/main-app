@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit';
-import { property, state, customElement } from 'lit/decorators.js';
+import { LitElement, html } from 'lit';
+import { state, customElement } from 'lit/decorators.js';
 
 @customElement('post-listing')
 export class PostListing extends LitElement {
@@ -17,7 +17,7 @@ export class PostListing extends LitElement {
   render() {
     return html`
         <h1>Posts</h1>
-        ${this.posts.map(p => html`<post-detail title="${p.title}"></post-detail>`)}
+        ${this.posts.map(p => html`<post-detail postId="${p.id}" title="${p.title}" postBody="${p.body}"></post-detail>`)}
     `;
   }
 }
