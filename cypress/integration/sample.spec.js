@@ -7,9 +7,16 @@
 
 describe('My First Test', () => {
 
-  // Skip
+  // Skip test use xit
   xit('Does not do much!', () => {
     expect(true).to.equal(false)
+  })
+
+  // Skip test use xit
+  xit('finds the content "type"', () => {
+    cy.visit('https://example.cypress.io')
+
+    cy.contains('type')
   })
 
   it('finds the main-app web component', () => {
@@ -32,10 +39,4 @@ describe('My First Test', () => {
       .find('post-detail')
   });
 
-  // Skip
-  xit('finds the content "type"', () => {
-    cy.visit('https://example.cypress.io')
-
-    cy.contains('type')
-  })
 })
