@@ -1,8 +1,14 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { state, customElement } from 'lit/decorators.js';
 
 @customElement('post-listing')
 export class PostListing extends LitElement {
+  static styles = css`
+    h1 {
+      color: #000099;
+    }
+  `;
+
   @state()
   private posts: Array<any> = [];
 

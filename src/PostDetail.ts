@@ -3,6 +3,12 @@ import { property, state, customElement } from 'lit/decorators.js';
 
 @customElement('post-detail')
 export class PostDetail extends LitElement {
+  static styles = css`
+    div:hover {
+      background-color: #CCCCFF;
+    }
+  `;
+
   @property()
   public title: string = '';
 
