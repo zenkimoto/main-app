@@ -36,6 +36,7 @@
     "@web/test-runner": "next",
     "babel-plugin-template-html-minifier": "^4.1.0",
     "concurrently": "^5.3.0",
+    "cypress": "^9.5.3",
     "deepmerge": "^4.2.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
