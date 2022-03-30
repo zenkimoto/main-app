@@ -22,3 +22,7 @@
 
 storybook-static
 custom-elements.json
+
+# cypress
+cypress/videos
+cypress/screenshots
