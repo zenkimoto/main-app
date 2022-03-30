@@ -14,7 +14,9 @@
     "build": "rimraf dist && tsc && rollup -c rollup.config.js && npm run analyze -- --exclude dist",
     "start:build": "web-dev-server --root-dir dist --app-index index.html --open",
     "analyze": "cem analyze --litelement",
-    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
+    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
+    "cypress": "cypress run",
+    "test:cypress": "start-server-and-test start http://localhost:8000 cypress"
   },
   "dependencies": {
     "lit": "^2.0.2"
@@ -47,6 +49,7 @@
     "rollup": "^2.60.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-workbox": "^6.2.0",
+    "start-server-and-test": "^1.14.0",
     "tslib": "^2.3.1",
     "typescript": "^4.5.2"
   },

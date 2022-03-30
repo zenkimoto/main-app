@@ -28,3 +28,37 @@ npm init @open-wc
 For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
 
 If you customize the configuration a lot, you can consider moving them to individual files.
+
+## Cypress
+
+To run cypress in the command line:
+
+```sh
+npx cypress run
+```
+
+or
+
+```sh
+yarn cypress
+```
+
+However, the server needs to be running first.  You can do that by running the following in another terminal window.
+
+```sh
+yarn start
+```
+
+To start the server and run the tests, you can use the npm module [start-server-and-test](https://github.com/bahmutov/start-server-and-test).
+
+```sh
+yarn test:cypress
+```
+
+The start-server-and-test command is use as follows:
+
+`start-server-and-test [npm script to start server] [url of test (i.e. localhost:8000)] [npm script of test]`
+
+In this application's case, it's:
+
+`start-server-and-test start http://localhost:8000 cypress`
